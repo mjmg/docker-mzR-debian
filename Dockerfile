@@ -8,7 +8,7 @@ RUN apt-get update -qq \
 RUN apt-get update -qq \
 	&& apt-get install  -y  \
     		curl \
-    		netcdf-bin
+    		netcdf-bin \
 		libnetcdf-dev 
 	
 # Setup default cran repo
