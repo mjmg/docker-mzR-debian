@@ -10,7 +10,8 @@ RUN apt-get update -qq \
     		curl \
     		netcdf-bin \
 		libnetcdf-dev \
-		libxml2-dev
+		libxml2-dev \
+		libssl-dev
 	
 # Setup default cran repo
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
