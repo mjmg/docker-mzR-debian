@@ -15,4 +15,8 @@ RUN apt-get update -qq \
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
 
 # This installs other R packages under Bioconductor
-RUN Rscript -e "source('https://bioconductor.org/biocLite.R'); biocLite('mzR')"
+# RUN Rscript -e "source('https://bioconductor.org/biocLite.R'); biocLite('mzR')"
+RUN Rscript -e "source('http://bioconductor.org/biocLite.R"); biocLite('devtools'); library(devtools); install_github('sneumann/mzR', branch='boost_159', repos=biocinstallRepos())"
+
+
+
